@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Build Docker Image"
-                bat "docker build -t seleniumapp:v1 ."
+                bat "docker build -t register:v1 ."
             }
         }
 
