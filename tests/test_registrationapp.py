@@ -21,7 +21,7 @@ def get_alert_text(driver):
 # Test 1: Empty username
 def test_empty_username(setup_teardown):
     driver = setup_teardown
-    driver.get("http://127.0.0.1:5000/")
+    driver.get("http://127.0.0.1:5001/")
     driver.find_element(By.NAME, "username").clear()
     driver.find_element(By.NAME, "pwd").send_keys("Password123")
     driver.find_element(By.NAME, "sb").click()
@@ -32,7 +32,7 @@ def test_empty_username(setup_teardown):
 # Test 2: Empty password
 def test_empty_password(setup_teardown):
     driver = setup_teardown
-    driver.get("http://127.0.0.1:5000/")
+    driver.get("http://127.0.0.1:5001/")
     driver.find_element(By.NAME, "username").send_keys("Teja")
     driver.find_element(By.NAME, "pwd").clear()
     driver.find_element(By.NAME, "sb").click()
@@ -43,7 +43,7 @@ def test_empty_password(setup_teardown):
 # Test 3: Short password
 def test_short_password(setup_teardown):
     driver = setup_teardown
-    driver.get("http://127.0.0.1:5000/")
+    driver.get("http://127.0.0.1:5001/")
     driver.find_element(By.NAME, "username").send_keys("Teja")
     driver.find_element(By.NAME, "pwd").send_keys("tej")
     driver.find_element(By.NAME, "sb").click()
@@ -54,7 +54,7 @@ def test_short_password(setup_teardown):
 # Test 4: Valid input
 def test_valid_input(setup_teardown):
     driver = setup_teardown
-    driver.get("http://127.0.0.1:5000/")
+    driver.get("http://127.0.0.1:5001/")
     driver.find_element(By.NAME, "username").send_keys("Teja")
     driver.find_element(By.NAME, "pwd").send_keys("tej123")
     driver.find_element(By.NAME, "sb").click()
