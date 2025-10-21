@@ -30,6 +30,7 @@ pipeline {
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "Push Docker Image to Docker Hub"
+                bat "docker tag register:v1"
                 bat "docker push teju898/week12:t5"
             }
         }
